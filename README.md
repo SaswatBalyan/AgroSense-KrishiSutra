@@ -24,16 +24,39 @@
 
 ## Screenshots
 
-<table>
-  <tr align="center">
-    <td><img src="screenshots/dashboard.jpg" alt="Dashboard: weather, market prices and farm summary" width="150" /><br /><em>Dashboard</em></td>
-    <td><img src="screenshots/auth.jpg" alt="Sign-in screen with OTP and Google options" width="150" /><br /><em>Sign in</em></td>
-    <td><img src="screenshots/language-select.jpg" alt="Language selector" width="150" /><br /><em>Language</em></td>
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/dashboard.jpg" alt="Dashboard" width="150"/><br/>
+      <em>Dashboard</em>
+    </td>
+    
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/auth.jpg" alt="Sign-in screen with OTP and Google options" width="150"/><br/>
+      <em>Sign in</em>
+    </td>
+    
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/language-select.jpg" alt="Language selector" width="150"/><br/>
+      <em>Language</em>
+    </td>
   </tr>
-  <tr align="center">
-    <td><img src="screenshots/marketplace.jpg" alt="Marketplace with searchable agri-inputs" width="150" /><br /><em>Marketplace</em></td>
-    <td><img src="screenshots/pocket-scientist.jpg" alt="Pocket Scientist on-device crop disease detection" width="150" /><br /><em>Pocket Scientist</em></td>
-    <td><img src="screenshots/water-compass.jpg" alt="Water Compass groundwater map" width="150" /><br /><em>Water Compass</em></td>
+
+  <tr>
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/marketplace.jpg" alt="Marketplace with searchable agri-inputs" width="150"/><br/>
+      <em>Marketplace</em>
+    </td>
+    
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/pocket-scientist.jpg" alt="Pocket Scientist on-device crop disease detection" width="150"/><br/>
+      <em>Pocket Scientist</em>
+    </td>
+    
+    <td align="center" style="padding: 15px;">
+      <img src="screenshots/water-compass.jpg" alt="Water Compass groundwater map" width="150"/><br/>
+      <em>Water Compass</em>
+    </td>
   </tr>
 </table>
 
