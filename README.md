@@ -10,9 +10,9 @@
   <a href="https://github.com/topics/flutter"><img src="https://img.shields.io/badge/Flutter-3.32-6D7B38?logo=flutter&logoColor=white&style=for-the-badge" alt="Flutter 3.32"></a>
   <a href="https://dart.dev/"><img src="https://img.shields.io/badge/Dart-%5E3.8.1-506544?logo=dart&logoColor=white&style=for-the-badge" alt="Dart ^3.8.1"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-506544?style=for-the-badge" alt="MIT license"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/Android%20%7C%20iOS%20%7C%20Web%20%7C%20Windows-98B185?style=for-the-badge" alt="Platforms"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/6%20languages-EC9907?style=for-the-badge" alt="6 languages"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/PRs%20welcome-EC9907?style=for-the-badge" alt="PRs welcome"></a>
+  <a href="https://github.com/SaswatBalyan/AgroSense-KrishiSutra"><img src="https://img.shields.io/badge/Android%20%7C%20iOS%20%7C%20Web%20%7C%20Windows-98B185?style=for-the-badge" alt="Platforms"></a>
+  <a href="https://github.com/SaswatBalyan/AgroSense-KrishiSutra"><img src="https://img.shields.io/badge/6%20languages-EC9907?style=for-the-badge" alt="6 languages"></a>
+  <a href="https://github.com/SaswatBalyan/AgroSense-KrishiSutra"><img src="https://img.shields.io/badge/PRs%20welcome-EC9907?style=for-the-badge" alt="PRs welcome"></a>
 </p>
 
 <p align="center">
@@ -75,7 +75,7 @@ Every screen reads from a local Drift (SQLite) database first. A sync queue trac
 **Prerequisites:** Flutter 3.x with the Dart SDK (project targets `^3.8.1`), and a device or emulator.
 
 ```bash
-git clone <your-repo-url> && cd krishi_sutra
+git clone https://github.com/SaswatBalyan/AgroSense-KrishiSutra.git && cd krishi_sutra
 flutter pub get
 flutter run            # runs in offline/demo mode with zero keys
 ```
@@ -138,4 +138,4 @@ flutter analyze --no-fatal-infos
 
 ## License
 
-Released under the [MIT License](LICENSE). © Krishi Sutra contributors.
+Released under the [MIT License](LICENSE). © 2026 Saswat Balyan.
