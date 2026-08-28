@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Krishi-Sutra branded launch screen: Dawn background with Juniper leaf dot -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/ks_dawn" />
+    <item
+        android:gravity="center"
+        android:width="96dp"
+        android:height="96dp"
+             android:drawable="@drawable/logo" />
+</layer-list>

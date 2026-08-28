@@ -1,0 +1,69 @@
+# Krishi-Sutra dev launcher template
+# ---------------------------------------------------------------
+# Copy this file to run_dev.ps1 (which is git-ignored) and paste
+# your own keys. Never commit real keys.
+#
+#   Copy-Item run_dev.ps1.example run_dev.ps1
+#
+#   powershell -File run_dev.ps1          -> build + install on device
+#   powershell -File run_dev.ps1 -Run     -> flutter run (hot reload)
+#
+# Leaving a key empty disables that feature and the app runs in
+# offline/demo mode (no cloud services required).
+# ---------------------------------------------------------------
+param(
+    [switch]$Run
+)
+
+$WEATHER_API_KEY   = "<your-openweathermap-api-key>"
+$AGMARKNET_API_KEY = "<your-agmarknet-api-key>"
+# Optional cloud features (leave empty for offline demo mode):
+$GROQ_API_KEY      = "<your-groq-api-key>"            # https://console.groq.com/keys
+$APPWRITE_ENDPOINT = "https://<region>.cloud.appwrite.io/v1"
+$APPWRITE_PROJECT_ID = "<your-project-id>"            # https://cloud.appwrite.io/console
+$APPWRITE_DATABASE_ID = "<your-database-id>"
+$APPWRITE_FARM_COLLECTION_ID = "farms"
+$APPWRITE_DIAGNOSIS_COLLECTION_ID = "diagnoses"
+$APPWRITE_MARKET_PRICE_COLLECTION_ID = "market_prices"
+$APPWRITE_WEATHER_COLLECTION_ID = "weather"
+$APPWRITE_ROADMAP_TASK_COLLECTION_ID = "roadmap_tasks"
+$APPWRITE_CHAT_MESSAGE_COLLECTION_ID = "chat_messages"
+$APPWRITE_GROUNDWATER_COLLECTION_ID = "groundwater_prospects"
+
+# Optional: Appwrite API key for admin operations (collection creation, etc.)
+# Get from Appwrite Console → Settings → API Keys
+$APPWRITE_API_KEY = ""
+
+# ---------------------------------------------------------------
+
+$defines = @()
+if ($WEATHER_API_KEY)   { $defines += "--dart-define=WEATHER_API_KEY=$WEATHER_API_KEY" }
+if ($AGMARKNET_API_KEY) { $defines += "--dart-define=AGMARKNET_API_KEY=$AGMARKNET_API_KEY" }
+if ($GROQ_API_KEY)      { $defines += "--dart-define=GROQ_API_KEY=$GROQ_API_KEY" }
+if ($APPWRITE_ENDPOINT) { $defines += "--dart-define=APPWRITE_ENDPOINT=$APPWRITE_ENDPOINT" }
+if ($APPWRITE_PROJECT_ID) { $defines += "--dart-define=APPWRITE_PROJECT_ID=$APPWRITE_PROJECT_ID" }
+if ($APPWRITE_DATABASE_ID) { $defines += "--dart-define=APPWRITE_DATABASE_ID=$APPWRITE_DATABASE_ID" }
+if ($APPWRITE_FARM_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_FARM_COLLECTION_ID=$APPWRITE_FARM_COLLECTION_ID" }
+if ($APPWRITE_DIAGNOSIS_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_DIAGNOSIS_COLLECTION_ID=$APPWRITE_DIAGNOSIS_COLLECTION_ID" }
+if ($APPWRITE_MARKET_PRICE_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_MARKET_PRICE_COLLECTION_ID=$APPWRITE_MARKET_PRICE_COLLECTION_ID" }
+if ($APPWRITE_WEATHER_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_WEATHER_COLLECTION_ID=$APPWRITE_WEATHER_COLLECTION_ID" }
+if ($APPWRITE_ROADMAP_TASK_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_ROADMAP_TASK_COLLECTION_ID=$APPWRITE_ROADMAP_TASK_COLLECTION_ID" }
+if ($APPWRITE_CHAT_MESSAGE_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_CHAT_MESSAGE_COLLECTION_ID=$APPWRITE_CHAT_MESSAGE_COLLECTION_ID" }
+if ($APPWRITE_GROUNDWATER_COLLECTION_ID) { $defines += "--dart-define=APPWRITE_GROUNDWATER_COLLECTION_ID=$APPWRITE_GROUNDWATER_COLLECTION_ID" }
+if ($APPWRITE_API_KEY) { $defines += "--dart-define=APPWRITE_API_KEY=$APPWRITE_API_KEY" }
+
+Set-Location $PSScriptRoot
+
+if (-not $defines) {
+    Write-Host "No keys set in run_dev.ps1 - building offline/demo mode."
+}
+
+if ($Run) {
+    flutter run @defines
+} else {
+    flutter build apk --debug @defines
+    if ($LASTEXITCODE -eq 0) {
+        $adb = "$env:LOCALAPPDATA\Android\sdk\platform-tools\adb.exe"
+        & $adb install -r "build\app\outputs\flutter-apk\app-debug.apk"
+    }
+}
