@@ -24,40 +24,17 @@
 
 ## Screenshots
 
-<table align="center" cellpadding="15" cellspacing="0">
-  <tr>
-    <td align="center">
-      <img src="screenshots/dashboard.jpg" alt="Dashboard" width="150"><br>
-      <em>Dashboard</em>
-    </td>
-
-    <td align="center">
-      <img src="screenshots/auth.jpg" alt="Sign in" width="150"><br>
-      <em>Sign in</em>
-    </td>
-
-    <td align="center">
-      <img src="screenshots/language-select.jpg" alt="Language" width="150"><br>
-      <em>Language</em>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <img src="screenshots/marketplace.jpg" alt="Marketplace" width="150"><br>
-      <em>Marketplace</em>
-    </td>
-
-    <td align="center">
-      <img src="screenshots/pocket-scientist.jpg" alt="Pocket Scientist" width="150"><br>
-      <em>Pocket Scientist</em>
-    </td>
-
-    <td align="center">
-      <img src="screenshots/water-compass.jpg" alt="Water Compass" width="150"><br>
-      <em>Water Compass</em>
-    </td>
-  </tr>
+<table align="center">
+<tr>
+<td align="center"><img src="screenshots/dashboard.jpg" alt="Dashboard" width="150"><br><em>Dashboard</em></td>
+<td align="center"><img src="screenshots/auth.jpg" alt="Sign in" width="150"><br><em>Sign in</em></td>
+<td align="center"><img src="screenshots/language-select.jpg" alt="Language" width="150"><br><em>Language</em></td>
+</tr>
+<tr>
+<td align="center"><img src="screenshots/marketplace.jpg" alt="Marketplace" width="150"><br><em>Marketplace</em></td>
+<td align="center"><img src="screenshots/pocket-scientist.jpg" alt="Pocket Scientist" width="150"><br><em>Pocket Scientist</em></td>
+<td align="center"><img src="screenshots/water-compass.jpg" alt="Water Compass" width="150"><br><em>Water Compass</em></td>
+</tr>
 </table>
 
 ## Features
