@@ -138,4 +138,4 @@ flutter analyze --no-fatal-infos
 
 ## License
 
-Released under the [MIT License](LICENSE). © 2026 Saswat Balyan.
+Released under the [MIT License](LICENSE). © 2026 Saswat Balyan © @Namaha-51 / Naman Agarwal.
